@@ -112,6 +112,7 @@ wire [31:0] csr_trap_value;
 wire        csr_mret_exec;
 wire [31:0] csr_mtvec;
 wire [31:0] csr_mepc;
+wire ex_illegal;
 assign ex_illegal = ex_decode_illegal || (ex_csr_en && !ex_csr_supported);
 //decoder
 decoder u_decoder (
